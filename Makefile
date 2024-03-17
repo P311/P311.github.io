@@ -1,4 +1,5 @@
 build: 
 	npm install
 	npm run build
-	cp -r ./dist/dreamcrafters/browser docs
+	rm -rf docs
+	cp -rf ./dist/dreamcrafters/browser docs
