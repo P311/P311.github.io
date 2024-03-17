@@ -1,0 +1,24 @@
+name: CI/CD
+run-name: CI/CD
+on: 
+  push:
+    branches:
+      - main
+    paths:
+      - src/**
+jobs:
+  Build_Angular_App:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+        with: 
+          repo-token: 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
+      - run: |
+          cd ${{ github.workspace }} 
+          make build
+          git config user.name 'deployer'
+          git config user.email 'linhao.liu98@gmail.com'
+          git add docs
+          git commit -m "deploy result"
+          git push --set-upstream origin main:prod --force
