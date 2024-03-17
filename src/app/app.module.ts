@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +11,7 @@ import { IntroComponent } from './intro/intro.component';
 import { ProcessComponent } from './process/process.component';
 import { ShowcaseComponent } from './showcase/showcase.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -15,11 +19,15 @@ import { AboutUsComponent } from './about-us/about-us.component';
     IntroComponent,
     ProcessComponent,
     ShowcaseComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatButtonModule,
+    MatIconModule,
+    MatToolbarModule
   ],
   providers: [
     provideClientHydration(),
