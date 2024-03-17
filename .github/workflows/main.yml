@@ -12,8 +12,8 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-        with: 
-          repo-token: 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
+        env: 
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: |
           cd ${{ github.workspace }} 
           make build
