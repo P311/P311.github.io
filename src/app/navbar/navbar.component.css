@@ -6,39 +6,37 @@ p {
   flex: 1 1 auto;
 }
 
-
-@media(max-width: 1200px) {
-  #nav-btns{
+@media (max-width: 1200px) {
+  #nav-btns {
     display: none;
   }
 
   #nav-logo {
-    height: 100%
+    height: 100%;
   }
 
-  .mat-menu-btn{
+  .mat-menu-btn {
     width: 250px;
   }
 
-  #mat-menu{
+  #mat-menu {
     margin-top: 50px;
   }
 
-  .nav-btn{
+  .nav-btn {
     font-size: 20px;
     font-weight: 700;
   }
 }
 
-
-@media(min-width: 1200px){
-  .nav-btn{
+@media (min-width: 1200px) {
+  .nav-btn {
     padding: 0px 25px;
     font-size: 18px;
     font-weight: 700;
   }
 
-  #mobile-menu{
+  #mobile-menu {
     display: none;
   }
 
