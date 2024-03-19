@@ -27,7 +27,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     AppRoutingModule,
     MatButtonModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
   ],
   providers: [
     provideClientHydration(),

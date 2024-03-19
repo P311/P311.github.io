@@ -1,21 +1,31 @@
-#title1{
-  font-weight: 700;
-  font-size: 35px;
-  padding-right: 400px;
-  line-height: 45px;
-  color: #222222;
+@media (min-width: 1200px){
+  #title1{
+    font-weight: 700;
+    font-size: 35px;
+    padding-right: 400px;
+    line-height: 45px;
+    color: #222222;
+  }
+  
+  #main-content-wrapper{
+    width: 1400px;
+    margin: 0 auto;
+  }
+  
+  #title1-wrapper{
+    height: 400px;
+    padding: 200px 20px 120px;
+  }
+  
+  
+  #start-icon{
+    height: 70px; 
+    font-size: 35px; 
+    width: 250px;
+    font-weight: 700;
+    border-radius: 25px;
+  } 
 }
-
-#main-content-wrapper{
-  width: 1400px;
-  margin: 0 auto;
-}
-
-#title1-wrapper{
-  height: 400px;
-  padding: 200px 20px 120px;
-}
-
 
 .background-image{
   content: "";
@@ -25,12 +35,4 @@
   transform: translateY(0px);
   background-image: url("/assets/intro_bg1_opa.png");
   opacity: 0.8;
-}
-
-#start-icon{
-  height: 70px; 
-  font-size: 35px; 
-  width: 250px;
-  font-weight: 700;
-  border-radius: 25px;
 }
