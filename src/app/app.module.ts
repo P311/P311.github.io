@@ -15,6 +15,7 @@ import { ProcessComponent } from './process/process.component';
 import { ShowcaseComponent } from './showcase/showcase.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { QuestionnaireComponent } from './questionnaire/questionnaire.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     ShowcaseComponent,
     AboutUsComponent,
     NavbarComponent,
+    QuestionnaireComponent,
   ],
   imports: [
     BrowserModule,
