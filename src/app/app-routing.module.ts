@@ -4,12 +4,14 @@ import { IntroComponent } from './intro/intro.component';
 import { ProcessComponent } from './process/process.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ShowcaseComponent } from './showcase/showcase.component';
+import { QuestionnaireComponent } from './questionnaire/questionnaire.component';
 
 const routes: Routes = [
   { path: 'intro', component: IntroComponent },
   { path: 'process', component: ProcessComponent },
   { path: 'about-us', component: AboutUsComponent },
   { path: 'showcase', component: ShowcaseComponent },
+  { path: 'questionnaire', component: QuestionnaireComponent },
   { path: '**', redirectTo: 'intro' },
 ];
 
