@@ -1,6 +1,6 @@
-p {
+/* p {
   margin-bottom: 0px !important;
-}
+} */
 
 .spacer {
   flex: 1 1 auto;
@@ -31,7 +31,7 @@ p {
 
 @media (min-width: 1200px) {
   .nav-btn {
-    padding: 0px 25px;
+    /* padding: 0px 25px; */
     font-size: 18px;
     font-weight: 700;
   }
@@ -41,7 +41,7 @@ p {
   }
 
   #nav-logo {
-    margin-left: 10%;
-    height: 100%;
+    width: 80%;
+    height: auto;
   }
 }
