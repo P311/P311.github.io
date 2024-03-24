@@ -6,7 +6,7 @@
 .hero-container {
   position: relative;
   flex-grow: 2;
-  margin-right: 20px; /* Space between the hero image and thumbnails */
+  margin-right: 20px;
 }
 
 .nav-arrow {
@@ -47,28 +47,28 @@
 
 .thumbnail-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Maintains a two-column layout */
-  grid-auto-rows: auto; /* Allows rows to adjust based on content height */
-  gap: 4px; /* Defines space between grid items */
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: auto;
+  gap: 4px;
   flex-grow: 1;
-  max-width: 300px; /* Controls the width of the thumbnail area, adjust as needed */
+  max-width: 300px;
 }
 
 .thumbnail {
-  display: block; /* Ensures that the div snugly fits around the content */
-  overflow: hidden; /* Hides any overflow, allowing for a clean look */
+  display: block;
+  overflow: hidden;
 }
 
 .thumbnail img {
-  width: 100%; /* Makes the image fill the width of its container */
-  height: auto; /* Allows the height to adjust while maintaining aspect ratio */
-  display: block; /* Removes default image margins */
-  border: 2px solid transparent; /* Pre-styling for non-selected thumbnails */
-  box-sizing: border-box; /* Includes border and padding in the element's size */
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 2px solid transparent;
+  box-sizing: border-box;
 }
 
 .thumbnail.selected img {
-  border-color: blue; /* Highlights the selected thumbnail */
+  border-color: rgb(0, 247, 255);
 }
 
 @media (max-width: 768px) {
@@ -79,22 +79,16 @@
   .hero-container,
   .thumbnail-container {
     width: 100%;
-    margin-right: 0; /* Adjusts spacing for mobile layout */
+    margin-right: 0;
   }
 
   .thumbnail-container {
-    grid-template-columns: repeat(
-      3,
-      1fr
-    ); /* Adjusts to a three-column layout on smaller screens */
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 480px) {
   .thumbnail-container {
-    grid-template-columns: repeat(
-      2,
-      1fr
-    ); /* Returns to a two-column layout for very small screens */
+    grid-template-columns: repeat(2, 1fr);
   }
 }

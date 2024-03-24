@@ -1,15 +1,3 @@
-// {
-//       src: '../../assets/images/01.jpg',
-//       alt: 'Image description',
-//       title: 'First Image',
-//       description: 'This is the first image description.',
-//     },
-//     {
-//       src: '../../assets/images/02.jpg',
-//       alt: 'Image description',
-//       title: 'Second Image',
-//       description: 'This is the second image description.',
-//     }
 import { Component } from '@angular/core';
 
 interface Image {
