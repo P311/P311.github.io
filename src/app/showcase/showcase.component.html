@@ -1,0 +1,29 @@
+<div class="showcase">
+  <div class="hero-container">
+    <img
+      [src]="currentImage.src"
+      alt="{{ currentImage.alt }}"
+      class="hero-image"
+    />
+    <div class="image-overlay">
+      <div class="title">{{ currentImage.title }}</div>
+      <div class="description">{{ currentImage.description }}</div>
+    </div>
+    <button class="nav-arrow left-arrow" (click)="navigate('prev')">
+      &#10094;
+    </button>
+    <button class="nav-arrow right-arrow" (click)="navigate('next')">
+      &#10095;
+    </button>
+  </div>
+  <div class="thumbnail-container">
+    <div
+      *ngFor="let image of images; let i = index"
+      class="thumbnail"
+      [class.selected]="image === currentImage"
+      (click)="setCurrentImage(image)"
+    >
+      <img [src]="image.src" alt="{{ image.alt }}" />
+    </div>
+  </div>
+</div>

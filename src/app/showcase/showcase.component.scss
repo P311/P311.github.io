@@ -1,0 +1,100 @@
+.showcase {
+  display: flex;
+  margin-top: 20px;
+}
+
+.hero-container {
+  position: relative;
+  flex-grow: 2;
+  margin-right: 20px; /* Space between the hero image and thumbnails */
+}
+
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  color: #fff;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+.hero-image {
+  width: 100%;
+  display: block;
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.thumbnail-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Maintains a two-column layout */
+  grid-auto-rows: auto; /* Allows rows to adjust based on content height */
+  gap: 4px; /* Defines space between grid items */
+  flex-grow: 1;
+  max-width: 300px; /* Controls the width of the thumbnail area, adjust as needed */
+}
+
+.thumbnail {
+  display: block; /* Ensures that the div snugly fits around the content */
+  overflow: hidden; /* Hides any overflow, allowing for a clean look */
+}
+
+.thumbnail img {
+  width: 100%; /* Makes the image fill the width of its container */
+  height: auto; /* Allows the height to adjust while maintaining aspect ratio */
+  display: block; /* Removes default image margins */
+  border: 2px solid transparent; /* Pre-styling for non-selected thumbnails */
+  box-sizing: border-box; /* Includes border and padding in the element's size */
+}
+
+.thumbnail.selected img {
+  border-color: blue; /* Highlights the selected thumbnail */
+}
+
+@media (max-width: 768px) {
+  .showcase {
+    flex-direction: column;
+  }
+
+  .hero-container,
+  .thumbnail-container {
+    width: 100%;
+    margin-right: 0; /* Adjusts spacing for mobile layout */
+  }
+
+  .thumbnail-container {
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); /* Adjusts to a three-column layout on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .thumbnail-container {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Returns to a two-column layout for very small screens */
+  }
+}
