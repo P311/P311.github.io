@@ -2,6 +2,7 @@ import React from 'react';
 import { Mail, Github, Linkedin } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { PROJECTS, WORKS } from './constants';
+import WordCloud from './WordCloud';
 
 const App = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -94,6 +95,11 @@ const App = () => {
             </div>
           </section>
         ))}
+      </section>
+
+      <section>
+        <h2 className="text-3xl font-bold text-white mb-12 text-center">Skills</h2>
+        <WordCloud></WordCloud>
       </section>
 
       <section className="relative max-w-6xl mx-auto px-4 py-16">
