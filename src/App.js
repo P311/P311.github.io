@@ -3,6 +3,7 @@ import { Mail, Github, Linkedin } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { PROJECTS, WORKS } from './constants';
 import WordCloud from './WordCloud';
+import NavBar from './NavBar'
 
 const App = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -46,8 +47,10 @@ const App = () => {
         />
       </div>
 
+      <NavBar/>
+
       {/* Header */}
-      <header className="relative pt-32 pb-16 text-center">
+      <header id="Header" className="relative pt-32 pb-16 text-center">
         <h1 className="text-6xl font-bold text-white mb-4 animate-fade-in">
           Linhao Liu
         </h1>
@@ -68,7 +71,7 @@ const App = () => {
       </header>
 
 
-      <section className="relative max-w-6xl mx-auto px-4 py-16">
+      <section id="Experience" className="relative max-w-6xl mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold text-white mb-12 text-center">Experience</h2>
         {WORKS.map((work) => (
           <section className="mb-32">
@@ -97,12 +100,12 @@ const App = () => {
         ))}
       </section>
 
-      <section>
+      <section id="Skills">
         <h2 className="text-3xl font-bold text-white mb-12 text-center">Skills</h2>
-        <WordCloud></WordCloud>
+        <WordCloud/>
       </section>
 
-      <section className="relative max-w-6xl mx-auto px-4 py-16">
+      <section id="Projects" className="relative max-w-6xl mx-auto px-4 py-16">
         <h2 className="text-3xl font-bold text-white mb-12 text-center">Featured Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {PROJECTS.map((project) => (
@@ -131,13 +134,8 @@ const App = () => {
       </section>
 
 
-      <section>
-        
-      </section>
-
-
       {/* Contact Section */}
-      <section className="relative max-w-2xl mx-auto px-4 py-16 text-center">
+      <section id="Contact" className="relative max-w-2xl mx-auto px-4 py-16 text-center">
         <h2 className="text-3xl font-bold text-white mb-8">Get in Touch</h2>
         <p className="text-gray-300 mb-8">
           I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
